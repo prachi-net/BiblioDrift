@@ -4,8 +4,6 @@
 
 BiblioDrift is a cozy, visual-first book discovery platform designed to make finding your next read feel like wandering through a warm, quiet bookstore rather than scrolling through a database.
 
-![BiblioDrift Demo](page.png)
-
 ## 🌟 Core Philosophy
 - **"Zero UI Noise"**: No popups, no aggressive metrics. Just calm browsing.
 - **Tactile Interaction**: 3D books that you can pull from the shelf and flip over.
@@ -31,7 +29,7 @@ BiblioDrift is a cozy, visual-first book discovery platform designed to make fin
 ### Frontend (Current MVP)
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/bibliodrift.git
+   git clone https://github.com/devanshi14malhotra/bibliodrift.git
    ```
 2. Open `index.html` in your browser.
    - That's it! No build steps required for the vanilla frontend.

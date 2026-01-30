@@ -37,6 +37,17 @@ BiblioDrift is a cozy, visual-first book discovery platform designed to make fin
 ### Backend (Future)
 Planned implementation using Python Flask.
 
+## 🧠 AI Service Integration
+To keep the frontend and backend synced, use the following mapping:
+
+| Feature | Frontend Call (`app.js`) | API Endpoint (`app.py`) | Logic Provider (`ai_service.py`) |
+| :--- | :--- | :--- | :--- |
+| **Book Vibe** | `POST /api/v1/generate-note` | `handle_generate_note()` | `generate_book_note()` |
+
+### API Integration
+- **Endpoint**: `POST /api/v1/generate-note`
+- **Logic**: Processed by `ai_service.py`
+
 ## 🤝 Contributing
 We welcome contributions to make BiblioDrift cozier!
 

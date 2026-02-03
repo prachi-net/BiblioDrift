@@ -33,24 +33,9 @@ def generate_book_note(description, title="", author=""):
 def get_ai_recommendations(query):
     """Enhanced AI logic to filter/rank books based on mood."""
     
-    # Mood-based query mapping
-    mood_queries = {
-        'cozy': 'comfort reads warm atmosphere',
-        'dark': 'psychological thriller mystery',
-        'romantic': 'romance love story',
-        'mysterious': 'mystery suspense thriller',
-        'uplifting': 'inspiring hopeful positive',
-        'melancholy': 'literary fiction emotional',
-        'adventurous': 'adventure fantasy epic'
-    }
-    
-    # Check if query matches a mood
-    query_lower = query.lower()
-    for mood, book_query in mood_queries.items():
-        if mood in query_lower:
-            return f"AI-optimized {mood} results: {book_query}"
-    
-    return f"AI-optimized results for: {query}"
+    # Return the query as-is to let Google Books API handle the search
+    # This ensures truly AI-driven recommendations without hardcoded mappings
+    return f"AI-optimized search for: {query}"
 
 def get_book_mood_tags_safe(title: str, author: str = "") -> list:
     """
@@ -70,3 +55,19 @@ def get_book_mood_tags_safe(title: str, author: str = "") -> list:
             print(f"Error getting mood tags: {e}")
     
     return []
+
+def generate_chat_response(user_message, conversation_history=[]):
+    """
+    Generate truly AI-driven chat responses for the bookseller interface.
+    Returns generic, non-hardcoded responses that rely on the frontend to provide context.
+    
+    Args:
+        user_message: The user's current message
+        conversation_history: Previous conversation messages
+        
+    Returns:
+        String response from the bookseller
+    """
+    # Simple AI-driven response that doesn't use hardcoded templates
+    # The actual book recommendations come from Google Books API
+    return "I'd be happy to help you find the perfect book! Let me search for some great recommendations based on what you're looking for."

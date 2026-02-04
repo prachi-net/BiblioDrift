@@ -514,7 +514,12 @@ class LibraryManager {
                    this.saveLocally();
                    // If we are on library page, trigger re-render
                    if (document.getElementById('shelf-want')) {
-                       window.location.reload(); 
+                       // Prevent infinite reload loop by only reloading once per session
+                       const hasSyncedOnce = sessionStorage.getItem('bibliodrift_synced_once');
+                       if (!hasSyncedOnce) {
+                           sessionStorage.setItem('bibliodrift_synced_once', 'true');
+                           window.location.reload();
+                       }
                    }
                 }
             }

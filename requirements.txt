@@ -26,6 +26,12 @@ lxml==4.9.3
 # Data Processing
 numpy>=1.26.0
 
+# Purchase Links (new)
+urllib3>=1.26.0
+
+# Optional: For future database integration
+# sqlalchemy==2.0.21
+# flask-sqlalchemy==3.0.5
 # Utilities
 click==8.3.1
 colorama==0.4.6

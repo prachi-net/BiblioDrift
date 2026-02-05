@@ -19,8 +19,7 @@ try:
 except ImportError:
     MOOD_ANALYSIS_AVAILABLE = False
     import logging
-    logging.getLogger(__name__).warning("Mood analysis package not available - some endpoints will be disabled")
-
+    logging.getLogger(__name__).warning("Mood analysis package not available - some endpoints will be disabled.")
 app = Flask(__name__)
 CORS(app)
 

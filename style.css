@@ -209,6 +209,30 @@ main {
   perspective: 1000px;
 }
 
+
+.genre-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 12px 0 20px;
+}
+
+.genre-buttons button {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  font-size: 13px;
+  color: #444;
+  border-radius: 4px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.genre-buttons button:hover {
+  background: #f2f2f2;
+}
+
+
 /* --- 3D Book Component --- */
 .book-scene {
   width: var(--book-width);

@@ -620,6 +620,22 @@ document.addEventListener('DOMContentLoaded', () => {
         renderer.renderCuratedSection('subject:fiction', 'row-genre');
     }
 
+    const genreButtons = document.querySelectorAll('.genre-buttons button');
+    
+    genreButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const genre = button.dataset.genre;
+    
+      // clear previous books
+            document.getElementById('row-genre').innerHTML = '';
+
+      // load books for selected genre
+            renderer.renderCuratedSection(`subject:${genre}`, 'row-genre');
+        });
+    });
+
+
+
 
     // Check if Library
     if (document.getElementById('shelf-want')) {
